@@ -1,0 +1,26 @@
+version: '3.3'
+services:
+  db:
+    image: postgres:13.1-alpine
+    restart: always
+    ports:
+      - "5432:5432"
+    container_name: db
+    volumes: 
+      - /var/lib/postgresql/data
+
+    environment:
+      - POSTGRES_DB=compose-postgres
+      - POSTGRES_USER=compose-postgres
+      - POSTGRES_PASSWORD=compose-postgres 
+
+  app:
+    build:
+      context: . 
+      dockerfile: Dockerfile
+    ports:
+      - "8842:8842" 
+    depends_on: 
+      - db
+    env_file: 
+      - ./.env

@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: postgres-config
+  labels:
+    app: postgres
+data:
+  POSTGRES_DB: todo
+  POSTGRES_USER: ECC7AE2E763E2305955EC2DCBCC0EA0F5499F6F5
+  POSTGRES_PASSWORD: ECC7AE2E763E2305955EC2DCBCC0EA0F5499F6F5
