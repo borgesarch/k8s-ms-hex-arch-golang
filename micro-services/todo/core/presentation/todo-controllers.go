@@ -1,9 +1,9 @@
 package presentation
 
 import (
-	t "clean-code-golang/core/domain/todo"
-	i "clean-code-golang/core/infrastructure/ioc/repositories"
-	s "clean-code-golang/core/infrastructure/ioc/services"
+	t "ms-hex-arch-golang-k8s/core/domain/todo"
+	i "ms-hex-arch-golang-k8s/core/infrastructure/ioc/repositories"
+	s "ms-hex-arch-golang-k8s/core/infrastructure/ioc/services"
 
 	"encoding/json"
 	"net/http"

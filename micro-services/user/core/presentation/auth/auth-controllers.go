@@ -1,9 +1,9 @@
 package auth
 
 import (
-	t "clean-code-golang/core/domain/users"
+	t "ms-hex-arch-golang-k8s/core/domain/users"
 
-	s "clean-code-golang/core/infrastructure/ioc/services"
+	s "ms-hex-arch-golang-k8s/core/infrastructure/ioc/services"
 
 	"encoding/json"
 	"net/http"

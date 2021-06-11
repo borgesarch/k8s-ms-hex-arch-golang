@@ -1,9 +1,8 @@
 package services
 
 import (
-	b "clean-code-golang/core/application/auth"
-	a "clean-code-golang/core/application/todo"
-	t "clean-code-golang/core/domain/todo"
+	a "ms-hex-arch-golang-k8s/core/application/todo"
+	t "ms-hex-arch-golang-k8s/core/domain/todo"
 
 	"encoding/json"
 
@@ -13,7 +12,6 @@ import (
 type Config struct {
 	Prefix      string
 	TodoService a.TodoService
-	AuthService b.AuthService
 }
 
 func Resolver() *dig.Container {
@@ -29,10 +27,6 @@ func Resolver() *dig.Container {
 	if err != nil {
 		panic(err)
 	}
-
-	container.Provide(func(cfg *Config) b.AuthService {
-		return b.AuthService(1)
-	})
 
 	container.Provide(func(cfg *Config) a.TodoService {
 		return a.TodoService(t.Todo{})

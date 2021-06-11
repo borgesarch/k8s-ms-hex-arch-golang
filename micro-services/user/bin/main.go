@@ -1,9 +1,8 @@
 package main
 
 import (
-	e "clean-code-golang/core/infrastructure/env"
-	c "clean-code-golang/core/presentation"
-	a "clean-code-golang/core/presentation/auth"
+	e "ms-hex-arch-golang-k8s/core/infrastructure/env"
+	c "ms-hex-arch-golang-k8s/core/presentation"
 
 	"net/http"
 	"os"
@@ -14,15 +13,11 @@ import (
 func main() {
 	m := mux.NewRouter().StrictSlash(true)
 
-	m.HandleFunc("/users", a.Handle(c.FindAll)).Methods("GET")
-	m.HandleFunc("/users", a.Handle(c.Update)).Methods("PUT")
-	m.HandleFunc("/users", a.Handle(c.Save)).Methods("POST")
-	m.HandleFunc("/users/{id}", a.Handle(c.FindById)).Methods("GET")
-	m.HandleFunc("/users/{id}", a.Handle(c.DeleteById)).Methods("DELETE")
-
-	m.HandleFunc("/auth", a.Auth).Methods("POST")
-	m.HandleFunc("/sign", a.Sign).Methods("POST")
-
+	m.HandleFunc("/users", c.FindAll).Methods("GET")
+	m.HandleFunc("/users", c.Update).Methods("PUT")
+	m.HandleFunc("/users", c.Save).Methods("POST")
+	m.HandleFunc("/users/{id}", c.FindById).Methods("GET")
+	m.HandleFunc("/users/{id}", c.DeleteById).Methods("DELETE")
 	e.LoadEnv()
 
 	APP_PORT := os.Getenv("APP_PORT")

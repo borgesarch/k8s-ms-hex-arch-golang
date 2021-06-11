@@ -1,7 +1,7 @@
 package data
 
 import (
-	t "clean-code-golang/core/domain/todo"
+	t "ms-hex-arch-golang-k8s/core/domain/todo"
 
 	"fmt"
 	"os"

@@ -1,8 +1,8 @@
 package repositories
 
 import (
-	t "clean-code-golang/core/domain/todo"
-	l "clean-code-golang/core/infrastructure/repositories/todo"
+	t "ms-hex-arch-golang-k8s/core/domain/todo"
+	l "ms-hex-arch-golang-k8s/core/infrastructure/repositories/todo"
 
 	"encoding/json"
 

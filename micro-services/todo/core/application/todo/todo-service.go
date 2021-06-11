@@ -1,8 +1,8 @@
 package todo
 
 import (
-	t "clean-code-golang/core/domain/todo"
-	i "clean-code-golang/core/infrastructure/ioc/repositories"
+	t "ms-hex-arch-golang-k8s/core/domain/todo"
+	i "ms-hex-arch-golang-k8s/core/infrastructure/ioc/repositories"
 )
 
 type ITodoService interface {

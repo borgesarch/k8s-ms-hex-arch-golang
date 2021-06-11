@@ -1,4 +1,4 @@
-module clean-code-golang
+module ms-hex-arch-golang-k8s
 
 go 1.16
 

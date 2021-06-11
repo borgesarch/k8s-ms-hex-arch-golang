@@ -1,8 +1,8 @@
 package repositories
 
 import (
-	u "clean-code-golang/core/domain/users"
-	k "clean-code-golang/core/infrastructure/repositories/user"
+	u "ms-hex-arch-golang-k8s/core/domain/users"
+	k "ms-hex-arch-golang-k8s/core/infrastructure/repositories/user"
 
 	"encoding/json"
 

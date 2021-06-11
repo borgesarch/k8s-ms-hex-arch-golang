@@ -1,7 +1,7 @@
 package services
 
 import (
-	b "clean-code-golang/core/application/auth"
+	b "ms-hex-arch-golang-k8s/core/application/users"
 
 	"encoding/json"
 
@@ -10,13 +10,12 @@ import (
 
 type Config struct {
 	Prefix      string
-	AuthService b.AuthService
+	UserService b.UserService
 }
 
 func Resolver() *dig.Container {
 
 	container := dig.New()
-
 	err := container.Provide(func() (*Config, error) {
 		var config Config
 		err := json.Unmarshal([]byte(`{"prefix": "[foo] "}`), &config)
@@ -27,8 +26,8 @@ func Resolver() *dig.Container {
 		panic(err)
 	}
 
-	container.Provide(func(cfg *Config) b.AuthService {
-		return b.AuthService(1)
+	container.Provide(func(cfg *Config) b.UserService {
+		return b.UserService(1)
 	})
 
 	return container

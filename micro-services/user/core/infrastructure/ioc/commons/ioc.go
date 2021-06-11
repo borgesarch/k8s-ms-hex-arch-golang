@@ -1,9 +1,9 @@
 package commons
 
 import (
-	d "clean-code-golang/core/infrastructure/data"
-	e "clean-code-golang/core/infrastructure/encrypt"
 	"encoding/json"
+	d "ms-hex-arch-golang-k8s/core/infrastructure/data"
+	e "ms-hex-arch-golang-k8s/core/infrastructure/encrypt"
 
 	"go.uber.org/dig"
 )

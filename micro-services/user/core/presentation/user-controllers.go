@@ -1,8 +1,8 @@
 package presentation
 
 import (
-	t "clean-code-golang/core/domain/users"
-	i "clean-code-golang/core/infrastructure/ioc/repositories"
+	t "ms-hex-arch-golang-k8s/core/domain/users"
+	i "ms-hex-arch-golang-k8s/core/infrastructure/ioc/repositories"
 
 	"encoding/json"
 	"net/http"

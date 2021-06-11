@@ -1,7 +1,7 @@
 package data
 
 import (
-	u "clean-code-golang/core/domain/users"
+	u "ms-hex-arch-golang-k8s/core/domain/users"
 
 	"fmt"
 	"os"

@@ -1,7 +1,7 @@
 package auth
 
 import (
-	s "clean-code-golang/core/infrastructure/ioc/services"
+	s "ms-hex-arch-golang-k8s/core/infrastructure/ioc/services"
 
 	"net/http"
 )

@@ -1,9 +1,8 @@
 package main
 
 import (
-	e "clean-code-golang/core/infrastructure/env"
-	c "clean-code-golang/core/presentation"
-	a "clean-code-golang/core/presentation/auth"
+	e "ms-hex-arch-golang-k8s/core/infrastructure/env"
+	c "ms-hex-arch-golang-k8s/core/presentation"
 
 	"net/http"
 	"os"
@@ -14,11 +13,11 @@ import (
 func main() {
 	m := mux.NewRouter().StrictSlash(true)
 
-	m.HandleFunc("/todos", a.Handle(c.FindAll)).Methods("GET")
-	m.HandleFunc("/todos", a.Handle(c.Update)).Methods("PUT")
-	m.HandleFunc("/todos", a.Handle(c.Save)).Methods("POST")
-	m.HandleFunc("/todos/{id}", a.Handle(c.FindById)).Methods("GET")
-	m.HandleFunc("/todos/{id}", a.Handle(c.DeleteById)).Methods("DELETE")
+	m.HandleFunc("/todos", c.FindAll).Methods("GET")
+	m.HandleFunc("/todos", c.Update).Methods("PUT")
+	m.HandleFunc("/todos", c.Save).Methods("POST")
+	m.HandleFunc("/todos/{id}", c.FindById).Methods("GET")
+	m.HandleFunc("/todos/{id}", c.DeleteById).Methods("DELETE")
 
 	e.LoadEnv()
 
