@@ -1,7 +1,6 @@
 
-
-<img src="https://th.bing.com/th/id/Rd02b6022d28527c9712d238d693fc5fc?rik=yk0FvKuQuWogNQ&pid=ImgRaw" width="200"> 
-<img src="https://kubernetes.io/images/nav_logo.svg" width="300">  
+<img src="https://kubernetes.io/images/nav_logo.svg" width="300">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/OpenID_logo.svg/1200px-OpenID_logo.svg.png" width="180"> 
 <img src="https://golang.org/lib/godoc/images/go-logo-blue.svg" width="120">
 
 # #
@@ -12,7 +11,8 @@
 
 [![License](https://img.shields.io/badge/License-MIT-silver.svg?style=flat)](https://github.com/clips/pattern/blob/master/LICENSE.txt) 
 [![License](https://img.shields.io/badge/Go-v1.16.4-blue.svg?style=flat)](https://github.com/clips/pattern/blob/master/LICENSE.txt) 
-[![License](https://img.shields.io/badge/Gorm-v1.9.15-green.svg?style=flat)](https://github.com/clips/pattern/blob/master/LICENSE.txt) 
+[![License](https://img.shields.io/badge/Gorm-v1.9.15-green.svg?style=flat)](https://github.com/clips/pattern/blob/master/LICENSE.txt)
+[![License](https://img.shields.io/badge/KeyCloak-13.3.1-silver.svg?style=flat)](https://github.com/clips/pattern/blob/master/LICENSE.txt) 
 [![License](https://img.shields.io/badge/Kubernetes-1.20.2-blue.svg?style=flat)](https://github.com/clips/pattern/blob/master/LICENSE.txt) 
 [![License](https://img.shields.io/badge/Uberdig-v1.10.0-silver.svg?style=flat)](https://github.com/clips/pattern/blob/master/LICENSE.txt) 
 
@@ -45,7 +45,7 @@ Events:       <none>
 
 * Hexagonal architecture in Go Language
 * Bounded Contexts
-* SSO/JWT
+* SSO/OPENID/OAUTH2/JWT
 * Dependancy Injection
 * Object-oriented programming
 * Automatic Migrations

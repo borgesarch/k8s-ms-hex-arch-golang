@@ -1,9 +1,9 @@
 package http
 
 import (
-	"time"
-
 	"net/http"
+	"os"
+	"time"
 
 	"github.com/MicahParks/keyfunc"
 
@@ -20,7 +20,7 @@ func (s SSO) Protect(f http.HandlerFunc) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
 
 		tokenString := r.Header.Get("Authorization")
-		jwksUrl := APP_PORT := os.Getenv("OPENID_CERT")
+		jwksUrl := os.Getenv("OPENID_CERT")
 
 		refreshInterval := time.Hour
 		options := keyfunc.Options{
