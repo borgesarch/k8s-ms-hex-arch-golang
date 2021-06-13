@@ -2,6 +2,7 @@ package main
 
 import (
 	e "ms-hex-arch-golang-k8s/core/infrastructure/env"
+	h "ms-hex-arch-golang-k8s/core/infrastructure/http"
 	c "ms-hex-arch-golang-k8s/core/presentation"
 
 	"net/http"
@@ -12,12 +13,14 @@ import (
 
 func main() {
 	m := mux.NewRouter().StrictSlash(true)
+	p := h.SSO(1)
 
-	m.HandleFunc("/users", c.FindAll).Methods("GET")
-	m.HandleFunc("/users", c.Update).Methods("PUT")
-	m.HandleFunc("/users", c.Save).Methods("POST")
-	m.HandleFunc("/users/{id}", c.FindById).Methods("GET")
-	m.HandleFunc("/users/{id}", c.DeleteById).Methods("DELETE")
+	m.HandleFunc("/users", p.Protect(c.FindAll)).Methods("GET")
+	m.HandleFunc("/users", p.Protect(c.Update)).Methods("PUT")
+	m.HandleFunc("/users", p.Protect(c.Save)).Methods("POST")
+	m.HandleFunc("/users/{id}", p.Protect(c.FindById)).Methods("GET")
+	m.HandleFunc("/users/{id}", p.Protect(c.DeleteById)).Methods("DELETE")
+
 	e.LoadEnv()
 
 	APP_PORT := os.Getenv("APP_PORT")
