@@ -1,7 +1,7 @@
 
 <img src="https://kubernetes.io/images/nav_logo.svg" width="300">
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/OpenID_logo.svg/1200px-OpenID_logo.svg.png" width="180"> 
-<img src="https://golang.org/lib/godoc/images/go-logo-blue.svg" width="120">
+
 
 # #
 
